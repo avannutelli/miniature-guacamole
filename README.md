@@ -4,9 +4,7 @@ This project aims to create a data base about my litterature using neo4j. The id
 *Article-[WRITTEDBY]->Author
 *Article-[ISABOUT]->KeyWord
 *Article-[SHOWS]->Result
-*Author<-[WorkWith]->Author (don't know if I will use it)
-*Author-[WORKON]->KeyWord
-*Author-[PRODUCED]->Result
+*Author-[WORKSON]->KeyWord
 *KeyWord<-[IMPACTS]-Result
 And maybe more if need !
 

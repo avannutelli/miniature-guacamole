@@ -1,9 +1,17 @@
 CREATE (j:Article { tittle : '',
+                    type : '',
                     year : ,
                     journal : ,})
+
 CREATE (a:Author { name : '',
                   affiliation : ''})
+
+CREATE (m:Method { name : ''})
+
+CREATE (c:Comment { com : ''})
+
 CREATE (k:KeyWord { words : ''})
+
 CREATE (r:Result { importance : '',
                   res: ''})
 
@@ -12,6 +20,12 @@ WHERE j.tittle = ''
 MATCH (a:Author)
 WHERE a.name = '' OR a.name = ''
 CREATE (j)-[:WRITTEDBY]->(a)
+
+MATCH (j:Article)
+WHERE j.tittle = ''
+MATCH (m:Method)
+WHERE m.name = ''
+CREATE (m)-[:ISUSED]->(j)
 
 MATCH (j:Article)
 WHERE j.tittle = ''
